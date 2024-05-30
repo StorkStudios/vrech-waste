@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        teleportAction.action.Enable();
         teleportAction.action.performed += OnTeleportAction;
 
         characterControllerDriver = GetComponent<CharacterControllerDriver>();

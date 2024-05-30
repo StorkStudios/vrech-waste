@@ -1578,7 +1578,7 @@
                     "path": "<XRController>{RightHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Generic XR Controller;Continuous Move;Noncontinuous Move",
+                    "groups": "Generic XR Controller",
                     "action": "ChangeRoom",
                     "isComposite": false,
                     "isPartOfComposite": false
