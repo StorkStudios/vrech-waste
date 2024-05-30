@@ -1,5 +1,5 @@
 {
-    "name": "XRI Default Input Actions",
+    "name": "InputActions",
     "maps": [
         {
             "name": "XRI Head",
@@ -1343,7 +1343,7 @@
                 {
                     "name": "",
                     "id": "402d9336-35ca-468e-968a-8e6105161117",
-                    "path": "",
+                    "path": "<XRController>{RightHand}/{PrimaryAction}",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -2217,6 +2217,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "test",
+            "id": "6c334732-c25a-4216-aa45-9b747f512acf",
+            "actions": [
+                {
+                    "name": "Teleport",
+                    "type": "Button",
+                    "id": "13357c6d-4f5a-4ce2-b398-b8610db2dd49",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ddaa2352-dbb9-4af9-a055-c8df5b089be6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller;Continuous Move;Noncontinuous Move",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f5ba129-023c-4998-a7d6-dd2f19431b03",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
@@ -2273,6 +2312,17 @@
                 },
                 {
                     "devicePath": "<XRController>{RightHand}",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }

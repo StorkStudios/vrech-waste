@@ -1119,15 +1119,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Teleport",
-                    "type": "Button",
-                    "id": "7e925ed9-185e-4576-bf57-e88f2f9af290",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1337,17 +1328,6 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Aim Flags",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "402d9336-35ca-468e-968a-8e6105161117",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
