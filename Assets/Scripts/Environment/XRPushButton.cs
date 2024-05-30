@@ -128,7 +128,7 @@ public class XRPushButton : XRBaseInteractable
     {
         base.Awake();
 
-        GetComponentInParent<Room>().ActivatedEvent += OnActivated;
+        RoomsManager.Instance.RoomChangedEvent += OnActivated;
     }
 
     private void OnActivated()

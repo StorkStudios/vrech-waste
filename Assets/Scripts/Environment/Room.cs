@@ -8,8 +8,6 @@ public class Room : MonoBehaviour
     [SerializeField]
     private Transform worldOrigin;
 
-    public event Action ActivatedEvent;
-
     private Vector3 startPosition;
 
     private void Awake()
@@ -20,7 +18,6 @@ public class Room : MonoBehaviour
     public void Activate()
     {
         transform.position = worldOrigin.position;
-        ActivatedEvent?.Invoke();
     }
 
     public void Deactivate()

@@ -9,26 +9,35 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private InputActionReference teleportAction;
 
-    private CharacterControllerDriver characterControllerDriver;
     private TeleportationProvider teleportationProvider;
 
     private void Awake()
     {
         teleportAction.action.Enable();
-        teleportAction.action.performed += OnTeleportAction;
+        teleportAction.action.performed += OnChangeRoomAction;
 
-        characterControllerDriver = GetComponent<CharacterControllerDriver>();
         teleportationProvider = GetComponentInChildren<TeleportationProvider>();
+
+        RoomsManager.Instance.RoomChangedEvent += OnRoomChanged;
     }
 
-    private void OnTeleportAction(InputAction.CallbackContext _)
+    private void OnChangeRoomAction(InputAction.CallbackContext _)
     {
-        TeleportPlayer();
+        ChangeRoom();
     }
 
-    private void TeleportPlayer()
+    private void ChangeRoom()
     {
         RoomsManager.Instance.ChangeRoom();
+    }
+
+    private void OnRoomChanged()
+    {
+        TeleportPlayerToOrigin();
+    }
+
+    private void TeleportPlayerToOrigin()
+    {
         TeleportRequest teleportRequest = new TeleportRequest();
         teleportRequest.destinationPosition = Vector3.zero;
         teleportationProvider.QueueTeleportRequest(teleportRequest);
