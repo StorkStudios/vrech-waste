@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class Room : MonoBehaviour
 {
     [SerializeField]
     private Transform worldOrigin;
+
+    public event Action ActivatedEvent;
 
     private Vector3 startPosition;
 
@@ -17,6 +20,7 @@ public class Room : MonoBehaviour
     public void Activate()
     {
         transform.position = worldOrigin.position;
+        ActivatedEvent?.Invoke();
     }
 
     public void Deactivate()
