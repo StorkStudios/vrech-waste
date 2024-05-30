@@ -1101,10 +1101,6 @@ PrefabInstance:
       propertyPath: worldOrigin
       value: 
       objectReference: {fileID: 1783572214}
-    - target: {fileID: 7437599028520585277, guid: 6f7765b64e099d0429fcb1f13452bf4f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7600455274800959877, guid: 6f7765b64e099d0429fcb1f13452bf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
