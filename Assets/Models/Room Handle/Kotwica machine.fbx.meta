@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: 5fe36dce30847444383dc858ad8b8378
-=======
-guid: d02c306a0c63daa47a0705c6a707bc6b
->>>>>>> Stashed changes
+guid: 0405d232e933d7049a587a10ded8eaf1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -56,11 +52,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-<<<<<<< Updated upstream
-    bakeAxisConversion: 1
-=======
     bakeAxisConversion: 0
->>>>>>> Stashed changes
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
