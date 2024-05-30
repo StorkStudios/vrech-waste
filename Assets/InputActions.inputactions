@@ -1119,15 +1119,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Teleport",
-                    "type": "Button",
-                    "id": "7e925ed9-185e-4576-bf57-e88f2f9af290",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1339,17 +1330,6 @@
                     "action": "Aim Flags",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "402d9336-35ca-468e-968a-8e6105161117",
-                    "path": "<XRController>{RightHand}/{PrimaryAction}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1437,6 +1417,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ChangeRoom",
+                    "type": "Button",
+                    "id": "42286f16-8f21-49f9-bea0-5b4b1de3217e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1580,6 +1569,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17f2b35c-28df-4d2c-9fc2-69555d6a2660",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller;Continuous Move;Noncontinuous Move",
+                    "action": "ChangeRoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -2217,45 +2217,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "test",
-            "id": "6c334732-c25a-4216-aa45-9b747f512acf",
-            "actions": [
-                {
-                    "name": "Teleport",
-                    "type": "Button",
-                    "id": "13357c6d-4f5a-4ce2-b398-b8610db2dd49",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "ddaa2352-dbb9-4af9-a055-c8df5b089be6",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller;Continuous Move;Noncontinuous Move",
-                    "action": "Teleport",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9f5ba129-023c-4998-a7d6-dd2f19431b03",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Teleport",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [
@@ -2312,17 +2273,6 @@
                 },
                 {
                     "devicePath": "<XRController>{RightHand}",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Keyboard",
-            "bindingGroup": "Keyboard",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }
