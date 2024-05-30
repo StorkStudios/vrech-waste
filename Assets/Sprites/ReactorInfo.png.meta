@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,265 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ThermometerFrame
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2300
+        width: 570
+        height: 1528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b9e15feb9d2204f927a6abd0cb3a00
+      internalID: 765328952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThermometerBackgroundFill
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 2362
+        width: 244
+        height: 1393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b6f38959dd73c48a82098a847a15b4
+      internalID: 1044054670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThermometerFill
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 2360
+        width: 244
+        height: 1391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b864644a485aae54aafd8ed67e6dc30e
+      internalID: 1200644870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RadioactiveArrow
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 2363
+        width: 118
+        height: 1463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9820e70b03e76d449bed120a4b7b4e90
+      internalID: -632288788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PressureBackground
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 2543
+        width: 1465
+        height: 1266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec2cf8923baf584887bc1f823a6f219
+      internalID: -310742370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PressureArrow
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 2733
+        width: 140
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7830b3e412d2a3d49bda9322172989d0
+      internalID: -1758032642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RadioactiveFrame
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1173
+        width: 1667
+        height: 999
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6ffe36a031ee44db6b49f81ed14c1e
+      internalID: 798311055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RadioactiveBackground
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 1197
+        width: 1577
+        height: 949
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5075b1875c86d44cbcd6a2cf43b4583
+      internalID: 1680030795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLarge
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 396
+        width: 603
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84edd3477bb84fa4c882d2e1ab3700e7
+      internalID: 1684025129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningSmall
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 408
+        width: 244
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea15d09afadfc574bb978fc1b80cc30d
+      internalID: -323174131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9055acde2d3cb6649ba860ab3c736db3
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PressureArrow: -1758032642
+      PressureBackground: -310742370
+      RadioactiveArrow: -632288788
+      RadioactiveBackground: 1680030795
+      RadioactiveFrame: 798311055
+      ReactorInfo_1: -115240679
+      ReactorInfo_10: 426906456
+      ReactorInfo_11: 1297443498
+      ReactorInfo_12: 1492891863
+      ReactorInfo_13: 1344494868
+      ReactorInfo_14: -622006796
+      ReactorInfo_15: -1856835393
+      ReactorInfo_16: 1026520762
+      ReactorInfo_18: -844582333
+      ReactorInfo_19: -671744450
+      ReactorInfo_2: 1379908222
+      ReactorInfo_20: 1297795807
+      ReactorInfo_21: -1960394454
+      ReactorInfo_22: 1785925908
+      ReactorInfo_23: -852762098
+      ReactorInfo_24: -1940481135
+      ReactorInfo_25: 1212443116
+      ReactorInfo_26: 140783019
+      ReactorInfo_27: -932729144
+      ReactorInfo_28: -363143312
+      ReactorInfo_29: -1143526955
+      ReactorInfo_3: -553575902
+      ReactorInfo_30: -576304778
+      ReactorInfo_31: -785970991
+      ReactorInfo_36: 884495537
+      ReactorInfo_8: -259179604
+      ReactorInfo_9: 829277255
+      ThermometerBackgroundFill: 1044054670
+      ThermometerFill: 1200644870
+      ThermometerFrame: 765328952
+      WarningLarge: 1684025129
+      WarningSmall: -323174131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
