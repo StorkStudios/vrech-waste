@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Resource")]
 public class Resource : ScriptableObject
 {
     const float min = 0;
