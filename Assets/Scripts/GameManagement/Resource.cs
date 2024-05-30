@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Resource : ScriptableObjectSingleton<Resource>
+public class Resource : ScriptableObject
 {
     const float min = 0;
     const float max = 100;
@@ -12,6 +12,10 @@ public class Resource : ScriptableObjectSingleton<Resource>
     private float value;
     [SerializeField]
     private float changeSpeed;
+    [SerializeField]
+    private int direction;
+    [SerializeField]
+    private float additionalSpeed;
 
     public event System.Action<Resource> ValueChanged;
     public event System.Action<Resource> ValueReachedBound;
@@ -30,9 +34,9 @@ public class Resource : ScriptableObjectSingleton<Resource>
         }
     }
 
-    public void UpdateValue(float deltaTime)
+    public void UpdateResource(float deltaTime)
     {
-        Value += changeSpeed * deltaTime;
+        Value += (direction * changeSpeed + additionalSpeed) * deltaTime;
     }
 
     public void SetChangeSpeed(float changeSpeed)
@@ -40,8 +44,18 @@ public class Resource : ScriptableObjectSingleton<Resource>
         this.changeSpeed = changeSpeed;
     }
 
+    public void SetAdditionalSpeed(float additionalSpeed)
+    {
+        this.additionalSpeed = additionalSpeed;
+    }
+
     public void AddToValue(float amount)
     {
         Value += amount;
+    }
+
+    public void ReverseDiraction()
+    {
+        direction *= -1;
     }
 }
