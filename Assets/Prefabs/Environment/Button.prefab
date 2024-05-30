@@ -168,11 +168,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Button: {fileID: 1163274290673154392}
-  m_PressDistance: 0.05
+  m_PressDistance: 0.06
   m_PressBuffer: 0.01
-  m_ButtonOffset: 0.36
+  m_ButtonOffset: 0.3
   m_ButtonSize: 0.28
-  m_ToggleButton: 0
+  m_ToggleButton: 1
   m_OnPress:
     m_PersistentCalls:
       m_Calls: []
