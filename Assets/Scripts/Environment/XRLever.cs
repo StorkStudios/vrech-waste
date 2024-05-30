@@ -8,37 +8,21 @@ namespace UnityEngine.XR.Content.Interaction
     /// </summary>
     public class XRLever : XRBaseInteractable
     {
-        const float k_LeverDeadZone = 0.1f; // Prevents rapid switching between on and off states when right in the middle
-
         [SerializeField]
         [Tooltip("The object that is visually grabbed and manipulated")]
         Transform m_Handle = null;
 
         [SerializeField]
         [Tooltip("The value of the lever")]
-        bool m_Value = false;
+        float m_Value = 0;
 
         [SerializeField]
-        [Tooltip("If enabled, the lever will snap to the value position when released")]
-        bool m_LockToValue;
-
-        [SerializeField]
-        [Tooltip("Angle of the lever in the 'on' position")]
-        [Range(-90.0f, 90.0f)]
+        [Range(0.0f, 90.0f)]
         float m_MaxAngle = 90.0f;
 
         [SerializeField]
-        [Tooltip("Angle of the lever in the 'off' position")]
-        [Range(-90.0f, 90.0f)]
-        float m_MinAngle = -90.0f;
-
-        [SerializeField]
         [Tooltip("Events to trigger when the lever activates")]
-        UnityEvent m_OnLeverActivate = new UnityEvent();
-
-        [SerializeField]
-        [Tooltip("Events to trigger when the lever deactivates")]
-        UnityEvent m_OnLeverDeactivate = new UnityEvent();
+        UnityEvent<float> m_OnLeverValueChange = new UnityEvent<float>();
 
         IXRSelectInteractor m_Interactor;
 
@@ -54,10 +38,10 @@ namespace UnityEngine.XR.Content.Interaction
         /// <summary>
         /// The value of the lever
         /// </summary>
-        public bool value
+        public float value
         {
             get => m_Value;
-            set => SetValue(value, true);
+            set => SetValue(value);
         }
 
         /// <summary>
@@ -74,28 +58,9 @@ namespace UnityEngine.XR.Content.Interaction
             set => m_MaxAngle = value;
         }
 
-        /// <summary>
-        /// Angle of the lever in the 'off' position
-        /// </summary>
-        public float minAngle
-        {
-            get => m_MinAngle;
-            set => m_MinAngle = value;
-        }
-
-        /// <summary>
-        /// Events to trigger when the lever activates
-        /// </summary>
-        public UnityEvent onLeverActivate => m_OnLeverActivate;
-
-        /// <summary>
-        /// Events to trigger when the lever deactivates
-        /// </summary>
-        public UnityEvent onLeverDeactivate => m_OnLeverDeactivate;
-
         void Start()
         {
-            SetValue(m_Value, true);
+            SetValue(m_Value);
         }
 
         protected override void OnEnable()
@@ -119,7 +84,7 @@ namespace UnityEngine.XR.Content.Interaction
 
         void EndGrab(SelectExitEventArgs args)
         {
-            SetValue(m_Value, true);
+            SetValue(m_Value);
             m_Interactor = null;
         }
 
@@ -150,49 +115,18 @@ namespace UnityEngine.XR.Content.Interaction
             var lookDirection = GetLookDirection();
             var lookAngle = Mathf.Atan2(lookDirection.z, lookDirection.y) * Mathf.Rad2Deg;
 
-            if (m_MinAngle < m_MaxAngle)
-                lookAngle = Mathf.Clamp(lookAngle, m_MinAngle, m_MaxAngle);
-            else
-                lookAngle = Mathf.Clamp(lookAngle, m_MaxAngle, m_MinAngle);
-
-            var maxAngleDistance = Mathf.Abs(m_MaxAngle - lookAngle);
-            var minAngleDistance = Mathf.Abs(m_MinAngle - lookAngle);
-
-            if (m_Value)
-                maxAngleDistance *= (1.0f - k_LeverDeadZone);
-            else
-                minAngleDistance *= (1.0f - k_LeverDeadZone);
-
-            var newValue = (maxAngleDistance < minAngleDistance);
+            lookAngle = Mathf.Clamp(lookAngle, -maxAngle, maxAngle);
 
             SetHandleAngle(lookAngle);
 
-            SetValue(newValue);
+            SetValue(lookAngle / (2 * maxAngle) + 0.5f);
         }
 
-        void SetValue(bool isOn, bool forceRotation = false)
+        void SetValue(float value)
         {
-            if (m_Value == isOn)
-            {
-                if (forceRotation)
-                    SetHandleAngle(m_Value ? m_MaxAngle : m_MinAngle);
+            m_Value = value;
 
-                return;
-            }
-
-            m_Value = isOn;
-
-            if (m_Value)
-            {
-                m_OnLeverActivate.Invoke();
-            }
-            else
-            {
-                m_OnLeverDeactivate.Invoke();
-            }
-
-            if (!isSelected && (m_LockToValue || forceRotation))
-                SetHandleAngle(m_Value ? m_MaxAngle : m_MinAngle);
+            m_OnLeverValueChange?.Invoke(m_Value);
         }
 
         void SetHandleAngle(float angle)
@@ -211,7 +145,7 @@ namespace UnityEngine.XR.Content.Interaction
             const float k_AngleLength = 0.25f;
 
             var angleMaxPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(m_MaxAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
-            var angleMinPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(m_MinAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
+            var angleMinPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(-m_MaxAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
 
             Gizmos.color = Color.green;
             Gizmos.DrawLine(angleStartPoint, angleMaxPoint);
@@ -222,7 +156,7 @@ namespace UnityEngine.XR.Content.Interaction
 
         void OnValidate()
         {
-            SetHandleAngle(m_Value ? m_MaxAngle : m_MinAngle);
+            SetHandleAngle(m_Value);
         }
     }
 }
