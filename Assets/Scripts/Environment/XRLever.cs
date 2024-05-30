@@ -1,162 +1,157 @@
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
-namespace UnityEngine.XR.Content.Interaction
+public class XRLever : XRBaseInteractable
 {
+    [SerializeField]
+    [Tooltip("The object that is visually grabbed and manipulated")]
+    Transform m_Handle = null;
+
+    [SerializeField]
+    [Tooltip("The value of the lever")]
+    float m_Value = 0;
+
+    [SerializeField]
+    [Range(0.0f, 90.0f)]
+    float m_MaxAngle = 90.0f;
+
+    [SerializeField]
+    [Tooltip("Events to trigger when the lever activates")]
+    UnityEvent<float> m_OnLeverValueChange = new UnityEvent<float>();
+
+    IXRSelectInteractor m_Interactor;
+
     /// <summary>
-    /// An interactable lever that snaps into an on or off position by a direct interactor
+    /// The object that is visually grabbed and manipulated
     /// </summary>
-    public class XRLever : XRBaseInteractable
+    public Transform handle
     {
-        [SerializeField]
-        [Tooltip("The object that is visually grabbed and manipulated")]
-        Transform m_Handle = null;
+        get => m_Handle;
+        set => m_Handle = value;
+    }
 
-        [SerializeField]
-        [Tooltip("The value of the lever")]
-        float m_Value = 0;
+    /// <summary>
+    /// The value of the lever
+    /// </summary>
+    public float value
+    {
+        get => m_Value;
+        set => SetValue(value);
+    }
 
-        [SerializeField]
-        [Range(0.0f, 90.0f)]
-        float m_MaxAngle = 90.0f;
+    /// <summary>
+    /// If enabled, the lever will snap to the value position when released
+    /// </summary>
+    public bool lockToValue { get; set; }
 
-        [SerializeField]
-        [Tooltip("Events to trigger when the lever activates")]
-        UnityEvent<float> m_OnLeverValueChange = new UnityEvent<float>();
+    /// <summary>
+    /// Angle of the lever in the 'on' position
+    /// </summary>
+    public float maxAngle
+    {
+        get => m_MaxAngle;
+        set => m_MaxAngle = value;
+    }
 
-        IXRSelectInteractor m_Interactor;
+    void Start()
+    {
+        SetValue(m_Value);
+    }
 
-        /// <summary>
-        /// The object that is visually grabbed and manipulated
-        /// </summary>
-        public Transform handle
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        selectEntered.AddListener(StartGrab);
+        selectExited.AddListener(EndGrab);
+    }
+
+    protected override void OnDisable()
+    {
+        selectEntered.RemoveListener(StartGrab);
+        selectExited.RemoveListener(EndGrab);
+        base.OnDisable();
+    }
+
+    void StartGrab(SelectEnterEventArgs args)
+    {
+        m_Interactor = args.interactorObject;
+    }
+
+    void EndGrab(SelectExitEventArgs args)
+    {
+        SetValue(m_Value);
+        m_Interactor = null;
+    }
+
+    public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
+    {
+        base.ProcessInteractable(updatePhase);
+
+        if (updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
         {
-            get => m_Handle;
-            set => m_Handle = value;
-        }
-
-        /// <summary>
-        /// The value of the lever
-        /// </summary>
-        public float value
-        {
-            get => m_Value;
-            set => SetValue(value);
-        }
-
-        /// <summary>
-        /// If enabled, the lever will snap to the value position when released
-        /// </summary>
-        public bool lockToValue { get; set; }
-
-        /// <summary>
-        /// Angle of the lever in the 'on' position
-        /// </summary>
-        public float maxAngle
-        {
-            get => m_MaxAngle;
-            set => m_MaxAngle = value;
-        }
-
-        void Start()
-        {
-            SetValue(m_Value);
-        }
-
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            selectEntered.AddListener(StartGrab);
-            selectExited.AddListener(EndGrab);
-        }
-
-        protected override void OnDisable()
-        {
-            selectEntered.RemoveListener(StartGrab);
-            selectExited.RemoveListener(EndGrab);
-            base.OnDisable();
-        }
-
-        void StartGrab(SelectEnterEventArgs args)
-        {
-            m_Interactor = args.interactorObject;
-        }
-
-        void EndGrab(SelectExitEventArgs args)
-        {
-            SetValue(m_Value);
-            m_Interactor = null;
-        }
-
-        public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
-        {
-            base.ProcessInteractable(updatePhase);
-
-            if (updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
+            if (isSelected)
             {
-                if (isSelected)
-                {
-                    UpdateValue();
-                }
+                UpdateValue();
             }
         }
+    }
 
-        Vector3 GetLookDirection()
-        {
-            Vector3 direction = m_Interactor.GetAttachTransform(this).position - m_Handle.position;
-            direction = transform.InverseTransformDirection(direction);
-            direction.x = 0;
+    Vector3 GetLookDirection()
+    {
+        Vector3 direction = m_Interactor.GetAttachTransform(this).position - m_Handle.position;
+        direction = transform.InverseTransformDirection(direction);
+        direction.x = 0;
 
-            return direction.normalized;
-        }
+        return direction.normalized;
+    }
 
-        void UpdateValue()
-        {
-            var lookDirection = GetLookDirection();
-            var lookAngle = Mathf.Atan2(lookDirection.z, lookDirection.y) * Mathf.Rad2Deg;
+    void UpdateValue()
+    {
+        var lookDirection = GetLookDirection();
+        var lookAngle = Mathf.Atan2(lookDirection.z, lookDirection.y) * Mathf.Rad2Deg;
 
-            lookAngle = Mathf.Clamp(lookAngle, -maxAngle, maxAngle);
+        lookAngle = Mathf.Clamp(lookAngle, -maxAngle, maxAngle);
 
-            SetHandleAngle(lookAngle);
+        SetHandleAngle(lookAngle);
 
-            SetValue(lookAngle / (2 * maxAngle) + 0.5f);
-        }
+        SetValue(lookAngle / (2 * maxAngle) + 0.5f);
+    }
 
-        void SetValue(float value)
-        {
-            m_Value = value;
+    void SetValue(float value)
+    {
+        m_Value = value;
 
-            m_OnLeverValueChange?.Invoke(m_Value);
-        }
+        m_OnLeverValueChange?.Invoke(m_Value);
+    }
 
-        void SetHandleAngle(float angle)
-        {
-            if (m_Handle != null)
-                m_Handle.localRotation = Quaternion.Euler(angle, 0.0f, 0.0f);
-        }
+    void SetHandleAngle(float angle)
+    {
+        if (m_Handle != null)
+            m_Handle.localRotation = Quaternion.Euler(angle, 0.0f, 0.0f);
+    }
 
-        void OnDrawGizmosSelected()
-        {
-            var angleStartPoint = transform.position;
+    void OnDrawGizmosSelected()
+    {
+        var angleStartPoint = transform.position;
 
-            if (m_Handle != null)
-                angleStartPoint = m_Handle.position;
+        if (m_Handle != null)
+            angleStartPoint = m_Handle.position;
 
-            const float k_AngleLength = 0.25f;
+        const float k_AngleLength = 0.25f;
 
-            var angleMaxPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(m_MaxAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
-            var angleMinPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(-m_MaxAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
+        var angleMaxPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(m_MaxAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
+        var angleMinPoint = angleStartPoint + transform.TransformDirection(Quaternion.Euler(-m_MaxAngle, 0.0f, 0.0f) * Vector3.up) * k_AngleLength;
 
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(angleStartPoint, angleMaxPoint);
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(angleStartPoint, angleMaxPoint);
 
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(angleStartPoint, angleMinPoint);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(angleStartPoint, angleMinPoint);
+    }
 
-        void OnValidate()
-        {
-            SetHandleAngle(m_Value);
-        }
+    void OnValidate()
+    {
+        SetHandleAngle(m_Value);
     }
 }
