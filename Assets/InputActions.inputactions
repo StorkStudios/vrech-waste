@@ -1582,6 +1582,17 @@
                     "action": "ChangeRoom",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2eec945-f575-4a9d-845e-44d18149918f",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeRoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
