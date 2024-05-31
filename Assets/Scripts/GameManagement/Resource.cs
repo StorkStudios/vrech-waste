@@ -59,4 +59,12 @@ public class Resource : ScriptableObject
     {
         direction *= -1;
     }
+
+    private void OnValidate()
+    {
+        if (value != Value)
+        {
+            Value = value;
+        }
+    }
 }

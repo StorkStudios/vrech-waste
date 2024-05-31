@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Handle: {fileID: 6264697738240416269}
   m_Value: 0.7
   m_MaxAngle: 40
-  m_OnLeverValueChange:
+  LeverValueChangeEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8550146233955464260
@@ -195,11 +195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 670442162e12f644399ea06d59d102fe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99998134
+      value: 0.9902681
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 670442162e12f644399ea06d59d102fe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.006108614
+      value: 0.1391731
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 670442162e12f644399ea06d59d102fe, type: 3}
       propertyPath: m_LocalRotation.y
@@ -299,4 +299,4 @@ CapsuleCollider:
   m_Radius: 0.03
   m_Height: 0.63
   m_Direction: 1
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Center: {x: 0, y: 0.3, z: 0.007}
