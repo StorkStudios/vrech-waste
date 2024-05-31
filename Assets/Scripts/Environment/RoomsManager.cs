@@ -20,6 +20,7 @@ public class RoomsManager : Singleton<RoomsManager>
 
     public event Action RoomChangedEvent;
 
+    private bool isChangingRoom = false;
     private bool firstRoomActive = true;
 
     private void Start()
@@ -29,11 +30,16 @@ public class RoomsManager : Singleton<RoomsManager>
 
     public void ChangeRoom()
     {
+        if(isChangingRoom)
+        {
+            return;
+        }
         StartCoroutine(ChangeRoomCoroutine());
     }
 
     private IEnumerator ChangeRoomCoroutine()
     {
+        isChangingRoom = true;
         float fadeOutEndTimestamp = Time.time + fadeDuration;
         while (Time.time < fadeOutEndTimestamp)
         {
@@ -61,5 +67,6 @@ public class RoomsManager : Singleton<RoomsManager>
             yield return null;
         }
         fadeVolume.weight = 0;
+        isChangingRoom = false;
     }
 }
