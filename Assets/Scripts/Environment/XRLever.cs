@@ -18,7 +18,7 @@ public class XRLever : XRBaseInteractable
 
     [SerializeField]
     [Tooltip("Events to trigger when the lever activates")]
-    UnityEvent<float> m_OnLeverValueChange = new UnityEvent<float>();
+    public UnityEvent<float> LeverValueChangeEvent = new UnityEvent<float>();
 
     IXRSelectInteractor m_Interactor;
 
@@ -113,8 +113,6 @@ public class XRLever : XRBaseInteractable
 
         lookAngle = Mathf.Clamp(lookAngle, -maxAngle, maxAngle);
 
-        SetHandleAngle(lookAngle);
-
         SetValue(lookAngle / (2 * maxAngle) + 0.5f);
     }
 
@@ -122,7 +120,8 @@ public class XRLever : XRBaseInteractable
     {
         m_Value = value;
 
-        m_OnLeverValueChange?.Invoke(m_Value);
+        SetHandleAngle((value - 0.5f) * (2 * maxAngle));
+        LeverValueChangeEvent?.Invoke(m_Value);
     }
 
     void SetHandleAngle(float angle)
@@ -152,6 +151,6 @@ public class XRLever : XRBaseInteractable
 
     void OnValidate()
     {
-        SetHandleAngle(m_Value);
+        SetValue(m_Value);
     }
 }
