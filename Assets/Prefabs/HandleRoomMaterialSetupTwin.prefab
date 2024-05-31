@@ -8,6 +8,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 201286940843902399, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[0].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 201286940843902399, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[1].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968444132568788243, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[0].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968444132568788243, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[1].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078940437158873811, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[0].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078940437158873811, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[1].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078940437158873811, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[2].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182414958250226547, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[0].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182414958250226547, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[1].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201730653191903321, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[0].effect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201730653191903321, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: leverResourceEffects.Array.data[1].effect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6211122994235530431, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
