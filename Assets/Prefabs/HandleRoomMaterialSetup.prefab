@@ -482,6 +482,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4542604666136469770}
     m_Modifications:
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_ToggleButton
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 96a356b17c46fae4188277ece526e009, type: 2}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddToValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691255586500894739, guid: c6548d9c17466924b957dad0589d86de, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2843580901585659334, guid: c6548d9c17466924b957dad0589d86de, type: 3}
       propertyPath: m_Name
       value: Button3

@@ -1671,6 +1671,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0.07671904
       objectReference: {fileID: 0}
+    - target: {fileID: 8686186477142278857, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: m_ToggleButton
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8885910008877538288, guid: 94a377d8b609c18448357d482284a160, type: 3}
       propertyPath: m_Name
       value: Room2

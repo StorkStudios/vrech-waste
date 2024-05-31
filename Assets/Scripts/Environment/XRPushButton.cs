@@ -252,7 +252,9 @@ public class XRPushButton : XRBaseInteractable
             if (pressed)
             {
                 if (!m_Pressed)
+                {
                     m_OnPress.Invoke();
+                }
             }
             else
             {
@@ -264,7 +266,9 @@ public class XRPushButton : XRBaseInteractable
 
         // Call value change event
         if (m_Pressed)
+        {
             m_OnValueChange.Invoke(m_Value);
+        }
     }
 
     public void PressButton(bool pressed)

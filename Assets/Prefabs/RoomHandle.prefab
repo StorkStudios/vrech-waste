@@ -63,6 +63,38 @@ PrefabInstance:
       propertyPath: events.Array.data[1].thresholdEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_ToggleButton
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddToValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430176301576722280, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6211122994235530431, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.51
