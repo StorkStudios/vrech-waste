@@ -28,6 +28,17 @@ public class ResourceManager : Singleton<ResourceManager>
         }
     }
 
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        foreach (var resource in resources)
+        {
+            resource.Item.ValueChanged -= OnResourceChange;
+            resource.Item.ValueReachedBound -= OnResourceReachedBound;
+        }
+    }
+
     private void OnResourceChange(Resource obj)
     {
         ResourceChange?.Invoke(obj);

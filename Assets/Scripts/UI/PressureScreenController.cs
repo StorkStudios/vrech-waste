@@ -32,6 +32,11 @@ public class PressureScreenController : MonoBehaviour
         pressure.ValueChanged += OnPressureChanged;
     }
 
+    private void OnDestroy()
+    {
+        pressure.ValueChanged -= OnPressureChanged;
+    }
+
     private void OnPressureChanged(Resource obj)
     {
         float t = obj.Value;
@@ -42,7 +47,7 @@ public class PressureScreenController : MonoBehaviour
         bool wasWarningOn = isWarningOn;
         isWarningOn = !disableWarningRange.IsBetween(t);
 
-        if (wasWarningOn != isWarningOn && audio != null)
+        if (wasWarningOn != isWarningOn)
         {
             if (isWarningOn)
             {

@@ -32,6 +32,11 @@ public class RadioactivityScreenController : MonoBehaviour
         radioactivity.ValueChanged += OnRadioactivityChanged;
     }
 
+    private void OnDestroy()
+    {
+        radioactivity.ValueChanged -= OnRadioactivityChanged;
+    }
+
     private void OnRadioactivityChanged(Resource obj)
     {
         float t = obj.Value;
@@ -42,7 +47,7 @@ public class RadioactivityScreenController : MonoBehaviour
         bool wasWarningOn = isWarningOn;
         isWarningOn = !disableWarningRange.IsBetween(t);
 
-        if (wasWarningOn != isWarningOn && audio != null)
+        if (wasWarningOn != isWarningOn)
         {
             if (isWarningOn)
             {
