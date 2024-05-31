@@ -67910,9 +67910,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4781883818771114696, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
       propertyPath: m_Name
       value: Lever3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.34202015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67999,9 +68011,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4781883818771114696, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
       propertyPath: m_Name
       value: Lever4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.34202015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68176,9 +68200,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4781883818771114696, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
       propertyPath: m_Name
       value: Lever5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.34202015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68431,9 +68467,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4781883818771114696, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
       propertyPath: m_Name
       value: Lever1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.34202015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -69348,9 +69396,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4781883818771114696, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
       propertyPath: m_Name
       value: Lever2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264697738240416269, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.34202015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
