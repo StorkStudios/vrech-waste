@@ -18,7 +18,7 @@ public class XRPushButton : XRBaseInteractable
 
     [SerializeField]
     [Tooltip("The object that is visually pressed down")]
-    Transform m_Button = null;
+    public Transform m_Button = null;
 
     [SerializeField]
     [Tooltip("The distance the button can be pressed")]
@@ -55,7 +55,9 @@ public class XRPushButton : XRBaseInteractable
     bool m_Pressed = false;
     bool m_Toggled = false;
     float m_Value = 0f;
-    Vector3 m_BaseButtonPosition = Vector3.zero;
+
+    public Vector3 m_BaseButtonPosition = Vector3.zero;
+    public event Action<float> ButtonHeightChangedEvent;
 
     Dictionary<IXRHoverInteractor, PressInfo> m_HoveringInteractors = new Dictionary<IXRHoverInteractor, PressInfo>();
 
@@ -85,12 +87,12 @@ public class XRPushButton : XRBaseInteractable
     /// <summary>
     /// Events to trigger when the button is pressed
     /// </summary>
-    public UnityEvent onPress => m_OnPress;
+    public UnityEvent ButtonPressedEvent => m_OnPress;
 
     /// <summary>
     /// Events to trigger when the button is released
     /// </summary>
-    public UnityEvent onRelease => m_OnRelease;
+    public UnityEvent ButtonReleaseedEvent => m_OnRelease;
 
     /// <summary>
     /// Events to trigger when the button distance value is changed. Only called when the button is pressed
@@ -223,6 +225,13 @@ public class XRPushButton : XRBaseInteractable
         var currentDistance = Mathf.Max(0f, -minimumHeight - m_PressBuffer);
         m_Value = currentDistance / m_PressDistance;
 
+        UpdateButtonStatus(pressed);
+
+        SetButtonHeight(minimumHeight);
+    }
+
+    private void UpdateButtonStatus(bool pressed)
+    {
         if (m_ToggleButton)
         {
             if (pressed)
@@ -256,7 +265,16 @@ public class XRPushButton : XRBaseInteractable
         // Call value change event
         if (m_Pressed)
             m_OnValueChange.Invoke(m_Value);
+    }
 
+    public void PressButton(bool pressed)
+    {
+        UpdateButtonStatus(pressed);
+
+        var minimumHeight = 0.0f;
+
+        if (m_ToggleButton && m_Toggled)
+            minimumHeight = -m_PressDistance;
         SetButtonHeight(minimumHeight);
     }
 
@@ -268,6 +286,7 @@ public class XRPushButton : XRBaseInteractable
         Vector3 newPosition = m_Button.localPosition;
         newPosition.y = height;
         m_Button.localPosition = newPosition;
+        ButtonHeightChangedEvent?.Invoke(height);
     }
 
     void OnDrawGizmosSelected()
