@@ -67940,8 +67940,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leverResourceEffects:
-  - resource: {fileID: 0}
-    effect: 0
+  - resource: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
+    effect: -7
+  - resource: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
+    effect: -7
+  - resource: {fileID: 11400000, guid: 96a356b17c46fae4188277ece526e009, type: 2}
+    effect: -7
 --- !u!4 &5543873110728720364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4617641303687725011, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
@@ -68005,14 +68009,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6655040408345359743}
+      addedObject: {fileID: 1968444132568788243}
   m_SourcePrefab: {fileID: 100100000, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
 --- !u!1 &6074030762396455975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5431051843705382249, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
   m_PrefabInstance: {fileID: 2239892289715810638}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6655040408345359743
+--- !u!114 &1968444132568788243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68025,8 +68029,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leverResourceEffects:
-  - resource: {fileID: 0}
-    effect: 0
+  - resource: {fileID: 11400000, guid: 96a356b17c46fae4188277ece526e009, type: 2}
+    effect: -4
+  - resource: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
+    effect: 4
 --- !u!4 &6845641202417520285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4617641303687725011, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
@@ -68200,8 +68206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leverResourceEffects:
-  - resource: {fileID: 0}
-    effect: 0
+  - resource: {fileID: 11400000, guid: 96a356b17c46fae4188277ece526e009, type: 2}
+    effect: -4
+  - resource: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
+    effect: 4
 --- !u!4 &9067562011049462005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4617641303687725011, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
@@ -68458,8 +68466,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leverResourceEffects:
-  - resource: {fileID: 0}
-    effect: 0
+  - resource: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
+    effect: 5
+  - resource: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
+    effect: 5
 --- !u!1001 &5888718239253805908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69368,8 +69378,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leverResourceEffects:
-  - resource: {fileID: 0}
-    effect: 0
+  - resource: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
+    effect: -5
+  - resource: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
+    effect: -5
 --- !u!4 &4183278585378460734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4617641303687725011, guid: 952e606dcb269624087b52b8ec73de78, type: 3}
