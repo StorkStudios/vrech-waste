@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Events;
 
+[CustomPropertyDrawer(typeof(SerializedPair<NullableObject<GameObject>, float>))]
 public class SerializedPairDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

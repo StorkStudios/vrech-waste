@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Resource")]
@@ -16,10 +17,16 @@ public class Resource : ScriptableObject
     [SerializeField]
     private int direction;
     [SerializeField]
-    private float additionalSpeed;
 
     public event System.Action<Resource> ValueChanged;
     public event System.Action<Resource> ValueReachedBound;
+
+    [SerializeField]
+    [ReadOnly]
+    private SerializedDictionary<GameObject, float> additionalSpeedComponents;
+    [SerializeField]
+    [ReadOnly]
+    private float additionalSpeed = 0;
 
     public float Value
     {
@@ -45,9 +52,10 @@ public class Resource : ScriptableObject
         this.changeSpeed = changeSpeed;
     }
 
-    public void SetAdditionalSpeed(float additionalSpeed)
+    public void AddToAdditionalSpeed(GameObject setter, float additionalSpeed)
     {
-        this.additionalSpeed = additionalSpeed;
+        additionalSpeedComponents[setter] = additionalSpeed;
+        this.additionalSpeed = additionalSpeedComponents.Values.Sum();
     }
 
     public void AddToValue(float amount)
@@ -65,7 +73,8 @@ public class Resource : ScriptableObject
         Value = resource.Value;
         changeSpeed = resource.changeSpeed;
         direction = resource.direction;
-        additionalSpeed = resource.additionalSpeed;
+        additionalSpeed = 0;
+        additionalSpeedComponents.Clear();
     }
 
     private void OnValidate()

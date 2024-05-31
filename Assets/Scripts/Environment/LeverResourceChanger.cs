@@ -24,13 +24,14 @@ public class LeverResourceChanger : MonoBehaviour
     {
         XRLever lever = GetComponent<XRLever>();
         lever.LeverValueChangeEvent.AddListener(OnLeverValueChanged);
+        OnLeverValueChanged(lever.value);
     }
 
     private void OnLeverValueChanged(float value)
     {
         foreach (var effect in leverResourceEffects)
         {
-            effect.Resource.SetAdditionalSpeed(value * effect.Effect);
+            effect.Resource.AddToAdditionalSpeed(gameObject, value * effect.Effect);
         }
     }
 }

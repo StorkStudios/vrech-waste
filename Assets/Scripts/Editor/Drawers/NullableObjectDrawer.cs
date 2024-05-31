@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CustomPropertyDrawer(typeof(NullableObject<Resource>))]
+[CustomPropertyDrawer(typeof(NullableObject<GameObject>))]
 public class NullableObjectDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

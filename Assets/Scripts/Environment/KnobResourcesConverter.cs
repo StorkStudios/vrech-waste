@@ -17,11 +17,12 @@ public class KnobResourcesConverter : MonoBehaviour
     {
         knob = GetComponent<XRKnob>();
         knob.onValueChange.AddListener(OnKnobValueChange);
+        OnKnobValueChange(knob.value);
     }
 
     private void OnKnobValueChange(float value)
     {
-        positiveResource.SetAdditionalSpeed((value * 2 - 1) * speed);
-        negativeResource.SetAdditionalSpeed(((1 - value) * 2 - 1) * speed);
+        negativeResource.AddToAdditionalSpeed(gameObject, ((1 - value) * 2 - 1) * speed);
+        positiveResource.AddToAdditionalSpeed(gameObject, (value * 2 - 1) * speed);
     }
 }
