@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Radioactivity
   m_EditorClassIdentifier: 
   value: 50
-  changeSpeed: 0
+  changeSpeed: 1
   direction: -1
   additionalSpeed: 0
