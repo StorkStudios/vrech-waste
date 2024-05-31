@@ -20,6 +20,8 @@ public class ThermometerScreenController : MonoBehaviour
     private float blinkDuration;
     [SerializeField]
     private RangeBoundariesFloat temperatureRange;
+    [SerializeField]
+    private AudioSource audio;
 
     private bool isWarningOn = false;
     private float counter = 0;
@@ -37,7 +39,20 @@ public class ThermometerScreenController : MonoBehaviour
         float temperatureValue = temperatureRange.Lerp(t / 100);
         temperatureText.text = $"{temperatureValue:000}°C";
 
+        bool wasWarningOn = isWarningOn;
         isWarningOn = !disableWarningRange.IsBetween(t);
+
+        if (wasWarningOn != isWarningOn)
+        {
+            if (isWarningOn)
+            {
+                audio.Play();
+            }
+            else
+            {
+                audio.Stop();
+            }
+        }
 
         bar.ChangeValue(t, 100);
     }

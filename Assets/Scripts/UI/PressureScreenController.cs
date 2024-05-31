@@ -20,6 +20,8 @@ public class PressureScreenController : MonoBehaviour
     private float blinkDuration;
     [SerializeField]
     private GameObject warning;
+    [SerializeField]
+    private AudioSource audio;
 
     private bool isWarningOn = false;
     private float counter = 0;
@@ -37,7 +39,20 @@ public class PressureScreenController : MonoBehaviour
         float pressureValue = valueRange.Lerp(t / 100);
         text.text = $"{pressureValue:000}";
 
+        bool wasWarningOn = isWarningOn;
         isWarningOn = !disableWarningRange.IsBetween(t);
+
+        if (wasWarningOn != isWarningOn)
+        {
+            if (isWarningOn)
+            {
+                audio.Play();
+            }
+            else
+            {
+                audio.Stop();
+            }
+        }
 
         arrow.ChangeValue(t, 100);
     }
