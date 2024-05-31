@@ -871,7 +871,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.58e-43, y: 2.9670112e-32, z: 7.58e-43, w: 1.5005551e+32}
+  m_BoundingSphereOverride: {x: 3.0600613e+32, y: 0, z: 0, w: 1.633797e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1675,6 +1675,10 @@ PrefabInstance:
       propertyPath: worldOrigin
       value: 
       objectReference: {fileID: 1783572214}
+    - target: {fileID: 7106764630989649812, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7395992148683656077, guid: 94a377d8b609c18448357d482284a160, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
