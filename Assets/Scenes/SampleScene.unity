@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 333677977}
   - component: {fileID: 333677976}
   - component: {fileID: 333677975}
+  - component: {fileID: 333677978}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -241,6 +242,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &333677978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333677973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &423529120
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +368,7 @@ GameObject:
   - component: {fileID: 890126861}
   - component: {fileID: 890126860}
   - component: {fileID: 890126862}
+  - component: {fileID: 890126863}
   m_Layer: 0
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -426,6 +447,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartButton: {fileID: 1978151253}
+--- !u!114 &890126863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890126858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!114 &890424104 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5548354660828827828, guid: 94a377d8b609c18448357d482284a160, type: 3}
@@ -1165,7 +1205,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815318735}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -1215,7 +1255,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 9.8e-44, z: 0, w: 2.1245481e+29}
+  m_BoundingSphereOverride: {x: 7.58e-43, y: 3.4e-44, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1678,6 +1718,7 @@ GameObject:
   - component: {fileID: 1978151255}
   - component: {fileID: 1978151254}
   - component: {fileID: 1978151253}
+  - component: {fileID: 1978151256}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1787,6 +1828,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978151251}
   m_CullTransparentMesh: 1
+--- !u!114 &1978151256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978151251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!4 &543450653056550448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7600455274800959877, guid: 6f7765b64e099d0429fcb1f13452bf4f, type: 3}
