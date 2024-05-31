@@ -60,6 +60,14 @@ public class Resource : ScriptableObject
         direction *= -1;
     }
 
+    public void CopyValues(Resource resource)
+    {
+        Value = resource.Value;
+        changeSpeed = resource.changeSpeed;
+        direction = resource.direction;
+        additionalSpeed = resource.additionalSpeed;
+    }
+
     private void OnValidate()
     {
         if (value != Value)
