@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultResource
   m_EditorClassIdentifier: 
   value: 40
-  changeSpeed: 0.1
+  changeSpeed: 0.25
   direction: 1
   additionalSpeedComponents:
     pairs: []
