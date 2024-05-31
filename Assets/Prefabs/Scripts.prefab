@@ -51,6 +51,7 @@ MonoBehaviour:
     - item: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
     - item: {fileID: 11400000, guid: 96a356b17c46fae4188277ece526e009, type: 2}
     - item: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
+  defaultResource: {fileID: 0}
 --- !u!114 &5737294607465358555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +81,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: -0.0022120553
-      value: 29.968536
+      value: 30
       inSlope: -0.099857464
       outSlope: -0.099857464
       tangentMode: 0
@@ -128,21 +129,21 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.961612
-      inSlope: 0.010035241
-      outSlope: 0.010035241
+      value: 1
+      inSlope: 0.003192523
+      outSlope: 0.003192523
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.9999999
+      outWeight: 0.9533718
     - serializedVersion: 3
       time: 599.9
-      value: 12.000517
-      inSlope: 0.03328112
-      outSlope: 0.03328112
+      value: 6
+      inSlope: 0.014945701
+      outSlope: 0.014945701
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.50121266
+      inWeight: 0.67137647
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -152,21 +153,21 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.961612
-      inSlope: 0.010035241
-      outSlope: 0.010035241
+      value: 1
+      inSlope: 0.0010440364
+      outSlope: 0.0010440364
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.9999999
+      outWeight: 0.05092967
     - serializedVersion: 3
       time: 599.9
-      value: 12.000517
-      inSlope: 0.03328112
-      outSlope: 0.03328112
+      value: 4
+      inSlope: 0.013609914
+      outSlope: 0.013609914
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.50121266
+      inWeight: 0.044963345
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
