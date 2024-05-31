@@ -871,7 +871,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 6e-45, z: 2.0095e-41, w: 0}
+  m_BoundingSphereOverride: {x: 7.58e-43, y: 2.9670112e-32, z: 7.58e-43, w: 1.5005551e+32}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1619,6 +1619,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1783572214}
     m_Modifications:
+    - target: {fileID: 1080437435626883310, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6629797300637803691, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
     - target: {fileID: 1417594494960411754, guid: 94a377d8b609c18448357d482284a160, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1658,6 +1662,14 @@ PrefabInstance:
     - target: {fileID: 1417594494960411754, guid: 94a377d8b609c18448357d482284a160, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884136798079775528, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: MinValueReachedEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884136798079775528, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: MinValueReachedEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4632000070464801831, guid: 94a377d8b609c18448357d482284a160, type: 3}
       propertyPath: worldOrigin
@@ -1712,7 +1724,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1485809093771795207, guid: 94a377d8b609c18448357d482284a160, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a377d8b609c18448357d482284a160, type: 3}
