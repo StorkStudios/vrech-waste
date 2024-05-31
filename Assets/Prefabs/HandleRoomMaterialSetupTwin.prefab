@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: leverResourceEffects.Array.data[1].effect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 886416394641067929, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbe7562fba7b42c478f5653f3252f75a, type: 2}
     - target: {fileID: 1968444132568788243, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
       propertyPath: leverResourceEffects.Array.data[0].effect
       value: 0
@@ -36,6 +40,14 @@ PrefabInstance:
       propertyPath: leverResourceEffects.Array.data[2].effect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3714919868867351940, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbe7562fba7b42c478f5653f3252f75a, type: 2}
+    - target: {fileID: 3718017571629618158, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aeaa5f5fb9805544ebeae7b24bcfe255, type: 2}
     - target: {fileID: 4182414958250226547, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
       propertyPath: leverResourceEffects.Array.data[0].effect
       value: 0
@@ -52,6 +64,10 @@ PrefabInstance:
       propertyPath: leverResourceEffects.Array.data[1].effect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4448961760714745775, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aeaa5f5fb9805544ebeae7b24bcfe255, type: 2}
     - target: {fileID: 6211122994235530431, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -96,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandleRoomMaterialSetupTwin
       objectReference: {fileID: 0}
+    - target: {fileID: 8056650407255514325, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbe7562fba7b42c478f5653f3252f75a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
