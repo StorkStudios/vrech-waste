@@ -35,7 +35,7 @@ public class ThermometerScreenController : MonoBehaviour
         float t = obj.Value;
 
         float temperatureValue = temperatureRange.Lerp(t / 100);
-        temperatureText.text = $"{temperatureValue:f0}°C";
+        temperatureText.text = $"{temperatureValue:000}°C";
 
         isWarningOn = !disableWarningRange.IsBetween(t);
 
