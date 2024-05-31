@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fbe7562fba7b42c478f5653f3252f75a, type: 2}
+    - target: {fileID: 1476998896778256584, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1968444132568788243, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
       propertyPath: leverResourceEffects.Array.data[0].effect
       value: 0
