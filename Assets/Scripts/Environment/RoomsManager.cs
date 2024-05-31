@@ -30,7 +30,7 @@ public class RoomsManager : Singleton<RoomsManager>
 
     public void ChangeRoom()
     {
-        if(isChangingRoom)
+        if(isChangingRoom || LoseManager.Instance.Lost)
         {
             return;
         }
