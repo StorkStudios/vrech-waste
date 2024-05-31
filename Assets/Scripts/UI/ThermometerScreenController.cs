@@ -42,7 +42,7 @@ public class ThermometerScreenController : MonoBehaviour
         bool wasWarningOn = isWarningOn;
         isWarningOn = !disableWarningRange.IsBetween(t);
 
-        if (wasWarningOn != isWarningOn)
+        if (wasWarningOn != isWarningOn && audio != null)
         {
             if (isWarningOn)
             {
