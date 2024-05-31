@@ -1675,6 +1675,14 @@ PrefabInstance:
       propertyPath: worldOrigin
       value: 
       objectReference: {fileID: 1783572214}
+    - target: {fileID: 7395992148683656077, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395992148683656077, guid: 94a377d8b609c18448357d482284a160, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7595895888671790952, guid: 94a377d8b609c18448357d482284a160, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9970527
