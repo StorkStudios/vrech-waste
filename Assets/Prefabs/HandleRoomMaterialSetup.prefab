@@ -919,6 +919,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5463967985052008063, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6011569667803458500}
+    - targetCorrespondingSourceObject: {fileID: -5463967985052008063, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1670415740619816749}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
 --- !u!1 &447266222660473417 stripped
 GameObject:
@@ -974,6 +977,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3163171260390484736, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
+--- !u!23 &1416715020696429961 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4760798245620555485, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
+  m_PrefabInstance: {fileID: 5888718239253805908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1738772057705673295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5303470081521338651, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
@@ -1492,6 +1500,68 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 372144781533790289, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
+--- !u!114 &1670415740619816749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319748079899933397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f6fbab625af8c4587e89a642bb5bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - valueFrom: 0
+    thresholdEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1416715020696429961}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 547a993c81e722249a10ec7a6aec2cee, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - valueFrom: 20
+    thresholdEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1416715020696429961}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 9ee36467379cb3a45b28beb6190cffb5, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - valueFrom: 80
+    thresholdEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1416715020696429961}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: d5a0f4807db1f17458e57cd191b6130e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  resource: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
 --- !u!1 &7494903128679267936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5063223942988036812, guid: 0bd402911acda52449d91a0119cf3d00, type: 3}
