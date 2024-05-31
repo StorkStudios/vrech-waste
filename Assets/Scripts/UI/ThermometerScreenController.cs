@@ -32,6 +32,11 @@ public class ThermometerScreenController : MonoBehaviour
         temperatureResource.ValueChanged += OnTemperatureChanged;
     }
 
+    private void OnDestroy()
+    {
+        temperatureResource.ValueChanged -= OnTemperatureChanged;
+    }
+
     private void OnTemperatureChanged(Resource obj)
     {
         float t = obj.Value;
@@ -42,7 +47,7 @@ public class ThermometerScreenController : MonoBehaviour
         bool wasWarningOn = isWarningOn;
         isWarningOn = !disableWarningRange.IsBetween(t);
 
-        if (wasWarningOn != isWarningOn && audio != null)
+        if (wasWarningOn != isWarningOn)
         {
             if (isWarningOn)
             {
