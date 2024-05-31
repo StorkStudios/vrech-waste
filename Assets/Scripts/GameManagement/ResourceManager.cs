@@ -8,6 +8,10 @@ public class ResourceManager : Singleton<ResourceManager>
     [SerializeField]
     private SerializedSet<Resource> resources;
 
+    [SerializeField]
+    [EditObjectInInspector]
+    private Resource defaultResource;
+
     public IEnumerable<Resource> Resources => resources.Select(res => res.Item);
 
     public event System.Action<Resource> ResourceChange;
@@ -19,6 +23,8 @@ public class ResourceManager : Singleton<ResourceManager>
         {
             resource.Item.ValueChanged += OnResourceChange;
             resource.Item.ValueReachedBound += OnResourceReachedBound;
+            resource.Item.Value = defaultResource.Value;
+            resource.Item.CopyValues(resource);
         }
     }
 
