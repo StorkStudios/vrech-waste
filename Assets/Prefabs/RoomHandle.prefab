@@ -340,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positiveResource: {fileID: 11400000, guid: 303a725514566e14bbfa511f7131686b, type: 2}
   negativeResource: {fileID: 11400000, guid: 0e249fb4ae14a0b47ba9d8f5b758e4f8, type: 2}
-  speed: 8
+  speed: 1.5
 --- !u!23 &1080437435626883310 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 911840103744533165, guid: 8c6fb608afb02f943891eb58399ff1c6, type: 3}
