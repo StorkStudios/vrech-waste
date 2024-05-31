@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoseManager : Singleton<LoseManager>
 {
-    public event System.Action OnLoose;
+    public event System.Action LooseEvent;
 
     public bool Lost
     {
@@ -13,15 +13,30 @@ public class LoseManager : Singleton<LoseManager>
         {
             if (lost != value && value == true)
             {
-                OnLoose?.Invoke();
+                LooseEvent?.Invoke();
                 lost = value;
             }
         }
     }
+
+    [SerializeField]
+    private GameObject gameOverCanvas;
+    [SerializeField]
+    private GameObject environment;
+
+    [SerializeField]
+    [ReadOnly]
     private bool lost = false;
 
     private void Start()
     {
-        ResourceManager.Instance.ResourceReachedBound += (_) => Lost = true;
+        ResourceManager.Instance.ResourceReachedBound += OnLoose;
+    }
+
+    private void OnLoose(Resource _)
+    {
+        Lost = true;
+        environment.SetActive(false);
+        gameOverCanvas.SetActive(true);
     }
 }
