@@ -371,6 +371,7 @@ MonoBehaviour:
     Max: 80
   blinkDuration: 1
   warning: {fileID: 6982883989536577084}
+  audio: {fileID: 8282222615288433109}
 --- !u!1 &7346488921947879630
 GameObject:
   m_ObjectHideFlags: 0

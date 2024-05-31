@@ -762,7 +762,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1212414850510101161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,3 +803,4 @@ MonoBehaviour:
   temperatureRange:
     Min: 0
     Max: 220
+  audio: {fileID: 7497848345095945333}
